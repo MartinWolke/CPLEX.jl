@@ -184,6 +184,7 @@ getreducedcosts(m::CplexMathProgModel) = get_reduced_costs(m.inner)
 getconstrduals(m::CplexMathProgModel) = get_constr_duals(m.inner)
 getrawsolver(m::CplexMathProgModel) = m.inner
 getnodecount(m::CplexMathProgModel) = get_node_count(m.inner)
+getmipiterationcount(m::CplexMathProgModel) = get_mip_iteration_count(m.inner)
 
 const var_type_map = Dict(
   'C' => :Cont,
