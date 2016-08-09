@@ -195,7 +195,7 @@ end
 
 get_node_count(model::Model) = @cpx_ccall(getnodecnt, Cint, (Ptr{Void},Ptr{Void}), model.env.ptr, model.lp)
 
-get_mip_iteration_count(model::Model) = @cpx_ccall(getmipitcnt, Cint, (Ptr{Void},Ptr{Void}), model.env.ptr, model.lp)
+get_iter_count(model::Model) = @cpx_ccall(getmipitcnt, Cint, (Ptr{Void},Ptr{Void}), model.env.ptr, model.lp)
 
 function get_rel_gap(model::Model)
   ret = Array(Cdouble,1)
